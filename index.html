@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eastern Hardware & Paints – Silchar's Trusted Hardware Store Since 1980</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand-dark:  #8B6914;
+    --sand:       #C49A3C;
+    --sand-light: #E8C97A;
+    --stone:      #6B5B45;
+    --stone-mid:  #8C7B6B;
+    --stone-light:#BFB0A0;
+    --warm-white: #FFFDF8;
+    --off-white:  #F7F2EA;
+    --parchment:  #EDE4D3;
+    --pale-sand:  #F2EBD9;
+    --dark-text:  #3A2E20;
+    --mid-text:   #6B5B45;
+    --white:      #FFFFFF;
+    --red:        #B84B2A;
+    --dulux-blue: #003DA5;
+    --hero-bg:    #C49A3C;
+    --hero-bg2:   #8B6914;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--off-white);
+    color: var(--dark-text);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--dark-text);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    height: 64px;
+    border-bottom: 3px solid var(--sand);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: var(--white);
+    letter-spacing: 2px;
+  }
+  .nav-logo span { color: var(--sand-light); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: #d4c9b8;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--sand-light); }
+  .nav-cta {
+    background: var(--sand);
+    color: var(--white) !important;
+    padding: 8px 18px;
+    border-radius: 3px;
+  }
+  .nav-cta:hover { background: var(--sand-dark); color: var(--white) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    margin-top: 64px;
+    min-height: 90vh;
+    background: linear-gradient(135deg, #4A3520 0%, #7A5C2E 40%, #A07830 70%, #C49A3C 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 60px,
+      rgba(255,255,255,0.03) 60px,
+      rgba(255,255,255,0.03) 120px
+    );
+  }
+  .hero-left {
+    padding: 80px 6% 80px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--sand-light);
+    color: var(--dark-text);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    margin-bottom: 24px;
+    width: fit-content;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 0.95;
+    color: var(--white);
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--sand-light);
+    display: block;
+  }
+  .hero-sub {
+    color: rgba(255,255,255,0.82);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 420px;
+    margin-bottom: 40px;
+  }
+  .hero-sub strong { color: var(--sand-light); }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--red);
+    color: var(--white);
+    padding: 14px 30px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: #8f3318; transform: translateY(-2px); }
+  .btn-wa {
+    background: #25D366;
+    color: var(--white);
+    padding: 14px 30px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-wa:hover { background: #1ebe5d; transform: translateY(-2px); }
+  .hero-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .hero-paint-strip {
+    position: absolute; top: 0; bottom: 0; left: 0; width: 6px;
+    background: linear-gradient(to bottom, var(--red), var(--yellow), var(--dulux-blue), var(--red));
+  }
+  .hero-visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 40px;
+    width: 100%;
+    animation: fadeInRight 1s ease forwards;
+  }
+  @keyframes fadeInRight { from { opacity:0; transform: translateX(40px); } to { opacity:1; transform: translateX(0); } }
+  .product-tile {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 24px 18px;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s, background 0.2s;
+    cursor: default;
+    backdrop-filter: blur(6px);
+  }
+  .product-tile:hover { background: rgba(255,255,255,0.22); border-color: var(--sand-light); transform: translateY(-4px); }
+  .product-tile .icon { font-size: 2.2rem; margin-bottom: 10px; display: block; }
+  .product-tile .name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.92);
+  }
+
+  /* ── DULUX BANNER ── */
+  .dulux-banner {
+    background: var(--dulux-blue);
+    padding: 24px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .dulux-banner-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .dulux-logo-box {
+    background: var(--white);
+    padding: 10px 18px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: var(--dulux-blue);
+    letter-spacing: 3px;
+    border-left: 5px solid var(--red);
+  }
+  .dulux-banner p {
+    color: rgba(255,255,255,0.9);
+    font-size: 0.95rem;
+  }
+  .dulux-banner strong { color: var(--yellow); }
+  .dulux-tag {
+    background: var(--yellow);
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    white-space: nowrap;
+  }
+
+  /* ── SECTION SHARED ── */
+  section { padding: 80px 8%; }
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--sand-dark);
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .section-sub {
+    color: var(--mid-text);
+    font-size: 0.98rem;
+    max-width: 540px;
+    line-height: 1.7;
+    margin-bottom: 48px;
+  }
+
+  .categories { background: var(--parchment); }
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .cat-card {
+    background: var(--white);
+    border: 1px solid #D9CBAF;
+    padding: 28px 20px;
+    text-align: center;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .cat-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--sand);
+    transform: scaleX(0);
+    transition: transform 0.25s;
+  }
+  .cat-card:hover { box-shadow: 0 8px 28px rgba(100,70,20,0.12); transform: translateY(-4px); }
+  .cat-card:hover::after { transform: scaleX(1); }
+  .cat-icon { font-size: 2.4rem; margin-bottom: 12px; display: block; }
+  .cat-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--dark-text);
+    margin-bottom: 6px;
+  }
+  .cat-items { font-size: 0.8rem; color: var(--mid-text); line-height: 1.5; }
+
+  /* ── PRODUCTS ── */
+  .products { background: var(--off-white); }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .prod-card {
+    background: var(--white);
+    border: 1px solid #DDD0B8;
+    overflow: hidden;
+    transition: all 0.25s;
+  }
+  .prod-card:hover { box-shadow: 0 10px 32px rgba(100,70,20,0.12); transform: translateY(-4px); }
+  .prod-header {
+    background: var(--stone);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    position: relative;
+  }
+  .prod-badge {
+    position: absolute; top: 10px; right: 10px;
+    background: var(--sand-light);
+    color: var(--dark-text);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    text-transform: uppercase;
+  }
+  .prod-body { padding: 18px; }
+  .prod-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    color: var(--dark-text);
+  }
+  .prod-desc { font-size: 0.82rem; color: var(--mid-text); line-height: 1.5; margin-bottom: 14px; }
+  .prod-enquire {
+    width: 100%;
+    background: var(--stone);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .prod-enquire:hover { background: var(--sand-dark); }
+
+  /* ── WHY US ── */
+  .whyus { background: #3A2E20; }
+  .whyus .section-label { color: var(--sand-light); }
+  .whyus .section-title { color: var(--white); }
+  .whyus .section-sub { color: #C0AE96; }
+  .whyus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+  }
+  .why-card {
+    border: 1px solid rgba(196,154,60,0.3);
+    padding: 30px 24px;
+    position: relative;
+    transition: border-color 0.2s;
+    background: rgba(255,255,255,0.04);
+  }
+  .why-card:hover { border-color: var(--sand-light); }
+  .why-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: var(--sand);
+    opacity: 0.5;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .why-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .why-text { font-size: 0.88rem; color: #C0AE96; line-height: 1.65; }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--pale-sand); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .contact-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  .contact-detail {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  .contact-detail .ci-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .contact-detail .ci-text strong {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sand-dark);
+    margin-bottom: 3px;
+  }
+  .contact-detail .ci-text p { font-size: 0.92rem; color: var(--mid-text); line-height: 1.6; }
+  .wa-direct {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: var(--white);
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 28px;
+    transition: background 0.2s;
+    width: fit-content;
+  }
+  .wa-direct:hover { background: #1ebe5d; }
+
+  /* ── FORM ── */
+  .contact-form { background: var(--white); padding: 40px; border: 1px solid #D9CBAF; }
+  .contact-form h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { margin-bottom: 18px; }
+  .form-group label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid-text);
+    margin-bottom: 6px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    border: 1px solid #D9CBAF;
+    background: #FAF6EE;
+    padding: 12px 14px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.92rem;
+    color: var(--dark-text);
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--sand); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px; }
+  .btn-submit-email {
+    flex: 1;
+    background: var(--stone);
+    color: var(--white);
+    border: none;
+    padding: 14px 20px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-submit-email:hover { background: var(--sand-dark); }
+  .btn-submit-wa {
+    flex: 1;
+    background: #25D366;
+    color: var(--white);
+    border: none;
+    padding: 14px 20px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .btn-submit-wa:hover { background: #1ebe5d; }
+  .form-note { font-size: 0.78rem; color: #aaa; margin-top: 12px; }
+
+  /* ── TOAST ── */
+  .toast {
+    position: fixed; bottom: 30px; right: 30px;
+    background: var(--dark-text);
+    color: var(--white);
+    padding: 14px 22px;
+    font-size: 0.9rem;
+    border-left: 4px solid var(--sand-light);
+    opacity: 0; pointer-events: none;
+    transform: translateY(20px);
+    transition: all 0.3s;
+    z-index: 999;
+  }
+  .toast.show { opacity: 1; transform: translateY(0); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #2A2018;
+    padding: 50px 8% 30px;
+    border-top: 3px solid var(--sand);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-brand .brand-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--white);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .footer-brand .brand-name span { color: var(--sand-light); }
+  .footer-brand p { font-size: 0.85rem; color: #A09080; line-height: 1.7; max-width: 260px; }
+  .footer-col h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sand);
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 8px; }
+  .footer-col ul li a {
+    font-size: 0.85rem;
+    color: #A09080;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: var(--sand-light); }
+  .footer-bottom {
+    border-top: 1px solid rgba(196,154,60,0.2);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-bottom p { font-size: 0.8rem; color: #706050; }
+
+  /* ── MOBILE MENU ── */
+  .menu-toggle { display: none; background: none; border: none; cursor: pointer; }
+  .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--white); margin: 5px 0; transition: all 0.3s; }
+
+  /* ── FLOATING WA ── */
+  .float-wa {
+    position: fixed; bottom: 24px; left: 24px; z-index: 200;
+    background: #25D366;
+    color: var(--white);
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 18px rgba(37,211,102,0.4);
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  .float-wa:hover { transform: scale(1.1); }
+
+  @media(max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-right { display: none; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+    .menu-toggle { display: block; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+  @media(max-width: 600px) {
+    section { padding: 60px 5%; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .dulux-banner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Eastern <span>Hardware</span></div>
+  <ul class="nav-links">
+    <li><a href="#categories">Products</a></li>
+    <li><a href="#paints">Paints</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Get Quote</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-badge">📍 Silchar, Assam · Est. 1980</div>
+    <h1>Build It<br><em>Right.</em><br>Paint It Bold.</h1>
+    <p class="hero-sub">
+      Your one-stop hardware destination in Silchar. Official <strong>Dulux paint stockist</strong> — plus everything painters, carpenters, and brick layers need.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Get a Quote</a>
+      <a href="#" class="btn-wa" id="hero-wa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.09-1.35C8.5 21.52 10.22 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.72 0-3.31-.5-4.65-1.35l-.33-.2-3.02.8.81-2.96-.22-.34C3.5 14.92 3 13.49 3 12c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9z"/></svg>
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-paint-strip"></div>
+    <div class="hero-visual">
+      <div class="product-tile"><span class="icon">🎨</span><span class="name">Dulux Paints</span></div>
+      <div class="product-tile"><span class="icon">🔨</span><span class="name">Tools</span></div>
+      <div class="product-tile"><span class="icon">🪛</span><span class="name">Fasteners</span></div>
+      <div class="product-tile"><span class="icon">🧱</span><span class="name">Masonry</span></div>
+      <div class="product-tile"><span class="icon">🪚</span><span class="name">Carpentry</span></div>
+      <div class="product-tile"><span class="icon">📏</span><span class="name">Measuring</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DULUX BANNER -->
+<div class="dulux-banner">
+  <div class="dulux-banner-left">
+    <div class="dulux-logo-box">DULUX</div>
+    <p>Official Dulux Authorised Dealer — <strong>Interior, Exterior, Primers & Textures</strong> all in stock.</p>
+  </div>
+  <div class="dulux-tag">✓ Genuine Dulux Products</div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="categories" id="categories">
+  <p class="section-label">Shop by Trade</p>
+  <h2 class="section-title">Everything You Need,<br>All in One Place</h2>
+  <p class="section-sub">From nails to paint, we serve painters, carpenters, masons, and every kind of builder in Silchar and the surrounding area.</p>
+  <div class="categories-grid">
+    <div class="cat-card">
+      <span class="cat-icon">🎨</span>
+      <div class="cat-name">Paints & Finishes</div>
+      <div class="cat-items">Dulux interior, exterior, primer, putty, distemper, texture paint</div>
+    </div>
+    <div class="cat-card">
+      <span class="cat-icon">🖌️</span>
+      <div class="cat-name">Painter's Supplies</div>
+      <div class="cat-items">Brushes, rollers, paint trays, masking tape, sandpaper, turpentine</div>
+    </div>
+    <div class="cat-card">
+      <span class="cat-icon">🔩</span>
+      <div class="cat-name">Fasteners</div>
+      <div class="cat-items">Nails, screws, bolts, washers, rawl plugs, anchor bolts</div>
+    </div>
+    <div class="cat-card">
+      <span class="cat-icon">🪚</span>
+      <div class="cat-name">Carpentry</div>
+      <div class="cat-items">Handles, hinges, locks, chisels, saws, wood adhesive</div>
+    </div>
+    <div class="cat-card">
+      <span class="cat-icon">🧱</span>
+      <div class="cat-name">Masonry</div>
+      <div class="cat-items">Limestone, cement, sand, grout, putty, waterproofing compounds</div>
+    </div>
+    <div class="cat-card">
+      <span class="cat-icon">📏</span>
+      <div class="cat-name">Measuring Tools</div>
+      <div class="cat-items">Tape measures, spirit levels, plumb bobs, squares, rulers</div>
+    </div>
+    <div class="cat-card">
+      <span class="cat-icon">🔧</span>
+      <div class="cat-name">Hand Tools</div>
+      <div class="cat-items">Hammers, pliers, spanners, screwdrivers, utility knives</div>
+    </div>
+    <div class="cat-card">
+      <span class="cat-icon">🛡️</span>
+      <div class="cat-name">Safety Gear</div>
+      <div class="cat-items">Gloves, masks, goggles, helmets, knee pads, work boots</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="paints">
+  <p class="section-label">Featured Products</p>
+  <h2 class="section-title">Popular Items in Stock</h2>
+  <p class="section-sub">All products available at our store in Silchar. Call or WhatsApp us for current pricing and bulk orders.</p>
+  <div class="products-grid">
+
+    <div class="prod-card">
+      <div class="prod-header" style="background:#003DA5;">🎨<span class="prod-badge">Bestseller</span></div>
+      <div class="prod-body">
+        <div class="prod-name">Dulux Weathershield</div>
+        <div class="prod-desc">Premium exterior emulsion. Protects against rain, humidity & UV. Ideal for Silchar's climate.</div>
+        <button class="prod-enquire" onclick="enquire('Dulux Weathershield')">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-header" style="background:#5B4A3C;">🎨<span class="prod-badge">Popular</span></div>
+      <div class="prod-body">
+        <div class="prod-name">Dulux Velvet Touch</div>
+        <div class="prod-desc">Smooth matt interior emulsion. Rich finish for walls and ceilings. Available in 1000+ shades.</div>
+        <button class="prod-enquire" onclick="enquire('Dulux Velvet Touch Interior Paint')">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-header" style="background:#888;">🪣</div>
+      <div class="prod-body">
+        <div class="prod-name">Wall Putty</div>
+        <div class="prod-desc">White cement-based putty for a perfectly smooth base before painting. Reduces paint consumption.</div>
+        <button class="prod-enquire" onclick="enquire('Wall Putty')">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-header" style="background:#2a2a2a;">🔩<span class="prod-badge">Bulk Available</span></div>
+      <div class="prod-body">
+        <div class="prod-name">Nails & Screws</div>
+        <div class="prod-desc">All sizes — wire nails, cut nails, roofing nails, wood screws, self-tapping screws & more.</div>
+        <button class="prod-enquire" onclick="enquire('Nails and Screws')">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-header" style="background:#3a3a3a;">🖌️</div>
+      <div class="prod-body">
+        <div class="prod-name">Paint Brushes & Rollers</div>
+        <div class="prod-desc">Professional-grade brushes in all sizes. Foam and fibre rollers for quick, smooth application.</div>
+        <button class="prod-enquire" onclick="enquire('Paint Brushes and Rollers')">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-header" style="background:#c9b99a;">🧱<span class="prod-badge">In Stock</span></div>
+      <div class="prod-body">
+        <div class="prod-name">Limestone / Lime Wash</div>
+        <div class="prod-desc">Traditional and modern lime products for masonry, plastering and whitewashing applications.</div>
+        <button class="prod-enquire" onclick="enquire('Limestone / Lime Wash')">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-header" style="background:#4a3000;">📏</div>
+      <div class="prod-body">
+        <div class="prod-name">Measuring Tapes & Levels</div>
+        <div class="prod-desc">Steel and fibreglass measuring tapes. Aluminium spirit levels from 30cm to 2m.</div>
+        <button class="prod-enquire" onclick="enquire('Measuring Tapes and Levels')">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-header" style="background:#1a3a1a;">🪛</div>
+      <div class="prod-body">
+        <div class="prod-name">Door Handles & Fittings</div>
+        <div class="prod-desc">Mortice locks, door handles, hinges and cabinet fittings in brass, chrome and stainless steel.</div>
+        <button class="prod-enquire" onclick="enquire('Door Handles and Fittings')">Enquire Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="whyus" id="about">
+  <p class="section-label" style="color:var(--yellow);">Why Choose Us</p>
+  <h2 class="section-title" style="color:var(--white);">Silchar's Most Trusted<br>Hardware Store Since 1980</h2>
+  <p class="section-sub">Serving builders, contractors, and homeowners in the Barak Valley for over 44 years.</p>
+  <div class="whyus-grid">
+    <div class="why-card">
+      <div class="why-num">01</div>
+      <div class="why-title">Official Dulux Dealer</div>
+      <div class="why-text">We are an authorised stockist of genuine Dulux paints — full range available including weather-resistance and texture finishes.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">02</div>
+      <div class="why-title">Huge Stock Range</div>
+      <div class="why-text">Thousands of SKUs covering paints, fasteners, tools, masonry materials and carpentry supplies under one roof.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">03</div>
+      <div class="why-title">Bulk & Trade Pricing</div>
+      <div class="why-text">Special rates for contractors, builders and bulk buyers. Contact us for project quotes and volume discounts.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">04</div>
+      <div class="why-title">Local Expertise</div>
+      <div class="why-text">Our staff understand Silchar's humid climate and recommend the right products for long-lasting results.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <p class="section-label">Contact & Enquiries</p>
+  <h2 class="section-title">Get in Touch</h2>
+  <div class="contact-grid">
+    <!-- Info side -->
+    <div class="contact-info">
+      <h3>Visit Us or Send a Query</h3>
+
+      <div class="contact-detail">
+        <span class="ci-icon">📍</span>
+        <div class="ci-text">
+          <strong>Location</strong>
+          <p>Silchar, Assam – 788001<br>Cachar District, India</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <span class="ci-icon">📞</span>
+        <div class="ci-text">
+          <strong>Phone / WhatsApp</strong>
+          <p>+91 XXXXX XXXXX<br>Mon–Sat: 8:00 AM – 8:00 PM</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <span class="ci-icon">✉️</span>
+        <div class="ci-text">
+          <strong>Email</strong>
+          <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="96fff8f0f9d6e5fffaf5fef7e4fef7e4f2e1f7e4f3b8f5f9fb">[email&#160;protected]</a></p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <span class="ci-icon">🕐</span>
+        <div class="ci-text">
+          <strong>Business Hours</strong>
+          <p>Mon–Sat: 8:00 AM – 8:00 PM<br>Sunday: 9:00 AM – 2:00 PM</p>
+        </div>
+      </div>
+
+      <a href="#" class="wa-direct" id="wa-chat-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.09-1.35C8.5 21.52 10.22 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.72 0-3.31-.5-4.65-1.35l-.33-.2-3.02.8.81-2.96-.22-.34C3.5 14.92 3 13.49 3 12c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+
+    <!-- Form side -->
+    <div class="contact-form">
+      <h3>Send Us Your Query</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" id="f-name" placeholder="e.g. Rajesh Kumar" required>
+        </div>
+        <div class="form-group">
+          <label>Phone / WhatsApp *</label>
+          <input type="tel" id="f-phone" placeholder="+91 XXXXX XXXXX" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="f-email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label>Product / Category of Interest</label>
+        <select id="f-product">
+          <option value="">-- Select a category --</option>
+          <option>Dulux Paints (Interior)</option>
+          <option>Dulux Paints (Exterior)</option>
+          <option>Wall Putty & Primer</option>
+          <option>Paint Brushes & Rollers</option>
+          <option>Nails & Screws</option>
+          <option>Door Handles & Fittings</option>
+          <option>Measuring Tools</option>
+          <option>Limestone / Masonry Materials</option>
+          <option>Carpentry Supplies</option>
+          <option>Safety Equipment</option>
+          <option>Other / General Enquiry</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your Message *</label>
+        <textarea id="f-msg" placeholder="Tell us what you need, quantity, timeline, or any questions..."></textarea>
+      </div>
+      <div class="form-actions">
+        <button class="btn-submit-email" onclick="sendEmail()">📧 Send Email</button>
+        <button class="btn-submit-wa" onclick="sendWhatsApp()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.09-1.35C8.5 21.52 10.22 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.72 0-3.31-.5-4.65-1.35l-.33-.2-3.02.8.81-2.96-.22-.34C3.5 14.92 3 13.49 3 12c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9z"/></svg>
+          Send via WhatsApp
+        </button>
+      </div>
+      <p class="form-note">* Required fields. We typically respond within 2 hours during business hours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand-name">Eastern <span>Hardware</span></div>
+      <p>Your trusted hardware and paint store in the Barak Valley. Serving builders, painters, carpenters and homeowners since 1980.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#categories">Dulux Paints</a></li>
+        <li><a href="#categories">Fasteners</a></li>
+        <li><a href="#categories">Carpentry</a></li>
+        <li><a href="#categories">Masonry</a></li>
+        <li><a href="#categories">Tools</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>For Trades</h4>
+      <ul>
+        <li><a href="#contact">Bulk Orders</a></li>
+        <li><a href="#contact">Trade Accounts</a></li>
+        <li><a href="#contact">Project Quotes</a></li>
+        <li><a href="#contact">Contractor Rates</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#contact">Send a Query</a></li>
+        <li><a href="#" id="footer-wa">WhatsApp</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#dbb2b5bdb49ba8b2b7b8b3baa9b3baa9bfacbaa9bef5b8b4b6">Email Us</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Eastern Hardware & Paints, Silchar, Assam. Est. 1980. All rights reserved.</p>
+    <p>Authorised Dulux Dealer · Cachar District</p>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="#" class="float-wa" id="float-wa-btn" title="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.09-1.35C8.5 21.52 10.22 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.72 0-3.31-.5-4.65-1.35l-.33-.2-3.02.8.81-2.96-.22-.34C3.5 14.92 3 13.49 3 12c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9z"/></svg>
+</a>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // ── CONFIG — replace these with real values ──
+  const WHATSAPP_NUMBER = '917002676289'; // e.g. 919876543210 (no + or spaces)
+  const EMAIL_ADDRESS   = 'emailgsaha@gmail.com';
+  const SHOP_NAME       = 'Eastern Hardware';
+
+  // ── Set all WhatsApp links ──
+  function waLink(msg) {
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+  }
+
+  document.getElementById('hero-wa').href      = waLink(`Hi! I'm interested in your products. Can you help me?`);
+  document.getElementById('wa-chat-btn').href   = waLink(`Hi! I'd like to enquire about your products.`);
+  document.getElementById('float-wa-btn').href  = waLink(`Hi! I have a query about Silchar Hardware & Paints.`);
+  document.getElementById('footer-wa').href     = waLink(`Hi! I'd like to know more about your stock.`);
+
+  // ── Form helpers ──
+  function getFormData() {
+    return {
+      name:    document.getElementById('f-name').value.trim(),
+      phone:   document.getElementById('f-phone').value.trim(),
+      email:   document.getElementById('f-email').value.trim(),
+      product: document.getElementById('f-product').value,
+      msg:     document.getElementById('f-msg').value.trim(),
+    };
+  }
+
+  function validate(d) {
+    if (!d.name)  { showToast('⚠️ Please enter your name.'); return false; }
+    if (!d.phone) { showToast('⚠️ Please enter your phone number.'); return false; }
+    if (!d.msg)   { showToast('⚠️ Please write your message.'); return false; }
+    return true;
+  }
+
+  function sendWhatsApp() {
+    const d = getFormData();
+    if (!validate(d)) return;
+    const text =
+`🛒 *New Enquiry — ${SHOP_NAME}*
+
+👤 *Name:* ${d.name}
+📞 *Phone:* ${d.phone}${d.email ? `\n✉️ *Email:* ${d.email}` : ''}${d.product ? `\n🏷️ *Product:* ${d.product}` : ''}
+
+💬 *Message:*
+${d.msg}`;
+    window.open(waLink(text), '_blank');
+    showToast('✅ Opening WhatsApp...');
+  }
+
+  function sendEmail() {
+    const d = getFormData();
+    if (!validate(d)) return;
+    const subject = encodeURIComponent(`[Enquiry] ${d.product || 'General'} — ${d.name}`);
+    const body = encodeURIComponent(
+`New enquiry from website — ${SHOP_NAME}
+
+Name:    ${d.name}
+Phone:   ${d.phone}
+Email:   ${d.email || 'Not provided'}
+Product: ${d.product || 'Not specified'}
+
+Message:
+${d.msg}
+
+---
+Sent via website contact form`
+    );
+    window.location.href = `mailto:${EMAIL_ADDRESS}?subject=${subject}&body=${body}`;
+    showToast('✅ Opening your email client...');
+  }
+
+  function enquire(productName) {
+    document.getElementById('f-product').value = '';
+    // Try to match select option
+    const sel = document.getElementById('f-product');
+    for (let i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].text.toLowerCase().includes(productName.toLowerCase().split(' ')[0])) {
+        sel.selectedIndex = i; break;
+      }
+    }
+    document.getElementById('f-msg').value = `Hi, I'd like to enquire about ${productName}. Please let me know availability and pricing.`;
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => document.getElementById('f-name').focus(), 600);
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 3500);
+  }
+
+  function toggleMenu() {
+    // simple toggle for mobile — you can expand as needed
+    const links = document.querySelector('.nav-links');
+    if (links.style.display === 'flex') {
+      links.style.display = 'none';
+    } else {
+      links.style.cssText = 'display:flex; flex-direction:column; position:absolute; top:64px; left:0; right:0; background:#1a1a1a; padding:20px 8%; gap:16px;';
+    }
+  }
+
+  // ── Scroll fade-in ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 })
